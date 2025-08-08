@@ -6,7 +6,7 @@ ENV_NAME=forecast
 
 install:
 	@echo "Création de l'environnement virtuel '$(ENV_NAME)'..."
-	python -m venv $(ENV_NAME)
+	python3 -m venv $(ENV_NAME)
 	@echo "Environnement créé."
 	@echo "Installation des dépendances..."
 	$(ENV_NAME)/bin/pip install --upgrade pip
