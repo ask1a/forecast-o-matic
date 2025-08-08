@@ -1,0 +1,19 @@
+# .flake8
+
+[flake8]
+max-line-length = 88
+exclude =
+    .git,
+    __pycache__,
+    data/,
+    mlflow/,
+    sandbox/,
+    airflow/logs/,
+    venv/,
+    .venv/
+ignore =
+    E203,  # whitespace before ':', compatible avec Black
+    W503   # line break before binary operator
+max-complexity = 10
+show-source = true
+statistics = true
