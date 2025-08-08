@@ -89,6 +89,7 @@ cd forecast-o-matic
 puis:
 ```
 make install
+source forecast/bin/activate
 ```
 ou bien:
 ```
