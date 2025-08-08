@@ -16,15 +16,15 @@ Ce projet propose une architecture complète pour :
 ---
 
 ##  Structure du projet
-forecast-o-matic/
-├── api/           # API de prédiction (FastAPI)
-├── airflow/       # Pipelines ETL (DAGs Airflow)
-├── mlflow/        # Suivi des modèles et expériences
-├── sandbox/       # Prototypes et notebooks exploratoires
-├── src/           # Code source des modèles
-├── data/          # Données d'exemple
-├── requirements.txt
-└── README.md
+forecast-o-matic/  
+├── api/           # API de prédiction (FastAPI)  
+├── airflow/       # Pipelines ETL (DAGs Airflow)  
+├── mlflow/        # Suivi des modèles et expériences  
+├── sandbox/       # Prototypes et notebooks exploratoires  
+├── src/           # Code source des modèles  
+├── data/          # Données d'exemple  
+├── requirements.txt  
+└── README.md  
 
 ##  Technologies utilisées
 
