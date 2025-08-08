@@ -81,6 +81,11 @@ Ce projet inclut un Makefile pour simplifier les tâches courantes. Assure-toi d
 ---
 
 ##  Installation
+Sur WSL installer avant:
+```
+sudo apt update
+sudo apt install build-essential gcc g++ python3-dev
+```
 
 ```bash
 git clone https://github.com/ask1a/forecast-o-matic.git
