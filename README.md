@@ -61,11 +61,37 @@ Ces conventions facilitent la lecture, la collaboration et l’automatisation da
 
 ---
 
+## Utilisation du Makefile
+Ce projet inclut un Makefile pour simplifier les tâches courantes. Assure-toi d’être dans le dossier racine (forecast-o-matic/) avant d’exécuter les commandes suivantes :
+### Créer l’environnement virtuel et installer les dépendances
+`make install`
+
+### Nettoyer les fichiers temporaires et l’environnement
+`make clean`
+
+### Lancer l’API FastAPI
+`make run-api`
+
+### Ouvrir Jupyter Notebook
+`make jupyter`
+
+### Démarrer l’interface MLflow
+`make mlflow`
+
+---
+
 ##  Installation
 
 ```bash
 git clone https://github.com/ask1a/forecast-o-matic.git
 cd forecast-o-matic
+```
+puis:
+```
+make install
+```
+ou bien:
+```
 python -m venv forecast
 # Sur Linux/macOS :
 source forecast/bin/activate
