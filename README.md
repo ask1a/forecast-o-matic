@@ -1,6 +1,6 @@
 #  forecast-o-matic
 
-**Cadre modulaire pour la prévision de séries temporelles**, conçu pour les data scientists qui veulent aller vite, bien, et avec style.
+**Cadre modulaire pour la prévision de séries temporelles**, conçu pour les data scientists qui veulent aller vite, bien, et avec un style de malade.
 
 ---
 
