@@ -10,6 +10,7 @@ exclude =
     sandbox/,
     airflow/logs/,
     venv/,
+    venvforecast/,
     .venv/
 # E203 : whitespace before ':', compatible avec Black
 # W503 : line break before binary operator
