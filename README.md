@@ -49,10 +49,10 @@ Pour assurer la clarté et la cohérence du code, le projet suit les conventions
 - Noms descriptifs et complets (`forecast_horizon_6_days`, `raw_data_path`)
 - Pas d’abréviations obscures
 ####  Fonctions : clarté et responsabilité unique
-Responsabilité unique : chaque fonction doit accomplir une seule tâche bien définie.
-Nom explicite : commence toujours le nom d’une fonction par un verbe d’action décrivant ce qu’elle fait.
-✅ load_data(), train_model(), evaluate_forecast()
-❌ data(), stuff(), do_things()
+Responsabilité unique : chaque fonction doit accomplir une seule tâche bien définie.  
+Nom explicite : commence toujours le nom d’une fonction par un verbe d’action décrivant ce qu’elle fait.  
+✅ load_data(), train_model(), evaluate_forecast()  
+❌ data(), stuff(), do_things()  
 
 ###  Classes
 - `PascalCase` pour les classes (`TimeSeriesModel`, `DataPreprocessor`)
