@@ -31,28 +31,28 @@ mlflow:
 	$(ENV_NAME)/bin/mlflow ui
 
 format:
-    black .
-    isort .
+	black .
+	isort .
 
 lint:
-    flake8 .
+	flake8 .
 
 test:
-    pytest --cov=src --cov-report=term-missing
+	pytest --cov=src --cov-report=term-missing
 
 quality-check: format lint test
 
 docker-down:
-    @echo "Arrêt des containers..."
-    docker-compose down
+	@echo "Arrêt des containers..."
+	docker-compose down
 
 docker-up-status:
-    @echo "Lancement des services en mode détaché avec build..."
-    docker-compose up --build -d
-    @echo "État des services :"
-    docker-compose ps
-    @echo "Vérification des services exposés :"
-    @docker-compose config | awk '
+	@echo "Lancement des services en mode détaché avec build..."
+	docker-compose up --build -d
+	@echo "État des services :"
+	docker-compose ps
+	@echo "Vérification des services exposés :"
+	@docker-compose config | awk '
         /^[^[:space:]]/ {service=$$1}
         /ports:/ {show=1; next}
         show && /^[[:space:]]*-"[0-9]+:[0-9]+"/ {
@@ -70,4 +70,4 @@ docker-up-status:
             }
         }
         /^[^[:space:]]/ {show=0}
-    '
+	'
