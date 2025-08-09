@@ -1,0 +1,29 @@
+[tool.black]
+line-length = 88
+target-version = ['py312']
+skip-string-normalization = false
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | venvforecast
+  | build
+  | dist
+  | airflow/logs
+  | mlflow
+  | sandbox
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 88
+exclude = '''                                                                                        /(
+    \.git                                                                                              | \.venv
+  | venv                                                                                               | venvforecast
+  | build
+  | dist
+  | airflow/logs
+  | mlflow                                                                                             | sandbox
+)/                                                                                                   '''                                                                                                  
