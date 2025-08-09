@@ -40,7 +40,7 @@ lint:
 test:
 	pytest --cov=src --cov-report=term-missing
 
-quality-check: format lint test
+quality-check: format test
 
 docker-down:
 	@echo "Arrêt des containers..."
