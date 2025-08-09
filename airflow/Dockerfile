@@ -1,7 +1,7 @@
 # airflow/Dockerfile
 FROM apache/airflow:slim-3.0.4-python3.12
 
-USER root
+USER airflow
 
 # Installer les extras nécessaires + MLflow + FastAPI
 RUN pip install --no-cache-dir \
