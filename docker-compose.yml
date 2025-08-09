@@ -18,7 +18,9 @@ services:
       - ./mlflow:/mlflow
 
   airflow:
-    build: ./airflow
+    build:
+      context: .
+      dockerfile: airflow/Dockerfile
     ports:
       - "8080:8080"
     environment:
