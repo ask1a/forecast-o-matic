@@ -81,8 +81,10 @@ Ce projet inclut un Makefile pour simplifier les tâches courantes. Assure-toi d
 ---
 
 ##  Installation
-Sur WSL installer avant:
+Sur WSL installer avant make, venv dans la version python (ici 3.12) et compilateur nécessaire (aarch64-linux-gnu-gcc):
 ```
+sudo apt install make
+sudo apt install python3.12-venv
 sudo apt update
 sudo apt install build-essential gcc g++ python3-dev
 ```
