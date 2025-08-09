@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir \
     requests
 
 # Copier les DAGs
-COPY ./airflow/dags /opt/airflow/dags
+COPY airflow/dags /opt/airflow/dags
 
 # Revenir à l'utilisateur airflow
 USER airflow
