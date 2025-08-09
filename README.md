@@ -101,15 +101,15 @@ cd forecast-o-matic
 puis:
 ```
 make install
-source forecast/bin/activate
+source forecastvenv/bin/activate
 ```
 ou bien:
 ```
-python -m venv forecast
+python -m venv forecastvenv
 # Sur Linux/macOS :
-source forecast/bin/activate
+source forecastvenv/bin/activate
 # Sur Windows :
-forecast\Scripts\activate
+forecastvenv\Scripts\activate
 pip install -r requirements.txt
 ```
 
