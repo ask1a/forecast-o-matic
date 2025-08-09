@@ -93,7 +93,7 @@ sudo apt install python3.12-venv
 sudo apt update
 sudo apt install build-essential gcc g++ python3-dev
 ```
-
+On clone et on se positionne dans le repo:
 ```bash
 git clone https://github.com/ask1a/forecast-o-matic.git
 cd forecast-o-matic
@@ -103,15 +103,7 @@ puis:
 make install
 source venvforecast/bin/activate
 ```
-ou bien:
-```
-python -m venv venvforecast
-# Sur Linux/macOS :
-source venvforecast/bin/activate
-# Sur Windows :
-venvforecast\Scripts\activate
-pip install -r requirements.txt
-```
+
 
 ##  Démarrer un exemple
 
