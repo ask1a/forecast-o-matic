@@ -1,6 +1,6 @@
 # Makefile pour forecast-o-matic
 
-ENV_NAME=forecastvenv
+ENV_NAME=venvforecast
 
 .PHONY: install clean run-api jupyter mlflow
 
