@@ -19,11 +19,16 @@ exclude = '''
 [tool.isort]
 profile = "black"
 line_length = 88
-exclude = '''                                                                                        /(
-    \.git                                                                                              | \.venv
-  | venv                                                                                               | venvforecast
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | venvforecast
   | build
   | dist
   | airflow/logs
-  | mlflow                                                                                             | sandbox
-)/                                                                                                   '''                                                                                                  
+  | mlflow
+  | sandbox
+)/
+'''
