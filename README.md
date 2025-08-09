@@ -48,6 +48,11 @@ Pour assurer la clarté et la cohérence du code, le projet suit les conventions
 - `snake_case` pour les variables et fonctions (`train_model`, `load_data`)
 - Noms descriptifs et complets (`forecast_horizon_6_days`, `raw_data_path`)
 - Pas d’abréviations obscures
+####  Fonctions : clarté et responsabilité unique
+Responsabilité unique : chaque fonction doit accomplir une seule tâche bien définie.  
+Nom explicite : commence toujours le nom d’une fonction par un verbe d’action décrivant ce qu’elle fait.  
+✅ load_data(), train_model(), evaluate_forecast()  
+❌ data(), stuff(), do_things()  
 
 ###  Classes
 - `PascalCase` pour les classes (`TimeSeriesModel`, `DataPreprocessor`)
@@ -81,6 +86,13 @@ Ce projet inclut un Makefile pour simplifier les tâches courantes. Assure-toi d
 ---
 
 ##  Installation
+Sur WSL installer avant make, venv dans la version python (ici 3.12) et compilateur nécessaire (aarch64-linux-gnu-gcc):
+```
+sudo apt install make
+sudo apt install python3.12-venv
+sudo apt update
+sudo apt install build-essential gcc g++ python3-dev
+```
 
 ```bash
 git clone https://github.com/ask1a/forecast-o-matic.git
