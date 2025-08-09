@@ -52,22 +52,22 @@ docker-up-status:
 	@echo "État des services :"
 	docker-compose ps
 	@echo "Vérification des services exposés :"
-	@docker-compose config | awk '
-        /^[^[:space:]]/ {service=$$1}
-        /ports:/ {show=1; next}
-        show && /^[[:space:]]*-"[0-9]+:[0-9]+"/ {
-            gsub(/"/, "", $$0);
-            split($$0, p, ":");
-            url="http://localhost:" p[1];
-            printf "→ %s sur %s : ", service, url;
-            cmd="curl -s -o /dev/null -w \"%{http_code}\" " url;
-            cmd | getline code;
-            close(cmd);
-            if (code == "200") {
-                print "✅ OK";
-            } else {
-                print "❌ KO (HTTP " code ")";
-            }
-        }
-        /^[^[:space:]]/ {show=0}
-	'
+	@docker-compose config | awk '\
+        /^[^[:space:]]/ {service=$$1} \
+        /ports:/ {show=1; next} \
+        show && /^[[:space:]]*-"[0-9]+:[0-9]+"/ { \
+            gsub(/"/, "", $$0); \
+            split($$0, p, ":"); \
+            url="http://localhost:" p[1]; \
+            printf "→ %s sur %s : ", service, url; \
+            cmd="curl -s -o /dev/null -w \"%%{http_code}\" " url; \
+            cmd | getline code; \
+            close(cmd); \
+            if (code == "200") { \
+                print "✅ OK"; \
+            } else { \
+                print "❌ KO (HTTP " code ")"; \
+            } \
+        } \
+        /^[^[:space:]]/ {show=0} \
+    '
