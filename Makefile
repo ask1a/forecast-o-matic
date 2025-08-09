@@ -2,7 +2,7 @@
 
 ENV_NAME=venvforecast
 
-.PHONY: install clean run-api jupyter mlflow
+.PHONY: install clean run-api jupyter mlflow format lint test quality-check
 
 install:
 	@echo "Création de l'environnement virtuel '$(ENV_NAME)'..."
@@ -29,3 +29,15 @@ jupyter:
 mlflow:
 	@echo "Lancement de MLflow UI..."
 	$(ENV_NAME)/bin/mlflow ui
+
+format:
+    black .
+    isort .
+
+lint:
+    flake8 .
+
+test:
+    pytest --cov=src --cov-report=term-missing
+
+quality-check: format lint test
