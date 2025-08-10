@@ -2,6 +2,7 @@
 pandas==2.3.1
 numpy==2.3.2
 scikit-learn==1.7.1
+tensorflow==2.19.0
 
 # Forecasting
 prophet
